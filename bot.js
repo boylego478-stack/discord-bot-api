@@ -3,7 +3,7 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const app = express();
 
 // === CONFIG ===
-const BOT_TOKEN = 'MTQzODA5NzgzNTEzNTMzNjQ3OA.GEqfdq.EU4nuubkSQTw83yHMGUYjbSLRPxIp22Rq3UafQ';
+const BOT_TOKEN = process.env.BOT_TOKEN;
 const PORT = process.env.PORT || 3000;
 
 // === DISCORD BOT SETUP ===
@@ -41,3 +41,4 @@ app.get('/check', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌐 Bot API listening on port ${PORT}`);
 });
+
